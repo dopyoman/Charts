@@ -50,4 +50,19 @@ class Multi extends Chart
 
         return $this;
     }
+
+    /**
+     * Set many datasets
+     * 
+     * @param array $elements
+     * @return $this
+     */
+    public function datasets($elements)
+    {
+        foreach ($elements as $label => $value) {
+            $this->dataset($label, $value);
+        }
+
+        return $this;
+    }
 }
